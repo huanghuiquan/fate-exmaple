@@ -1,0 +1,2 @@
+
+detail: ${name} ${id | add}

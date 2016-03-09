@@ -1,0 +1,94 @@
+
+$border-color = #e1e1e1
+
+.b
+    border: 0 solid $border-color
+
+    &-t
+        border-top-width: 1px
+
+    &-r
+        border-right-width: 1px
+
+    &-b
+        border-bottom-width: 1px
+
+    &-l
+        border-left-width: 1px
+
+    &-all
+        border-width: 1px
+
+@media (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio: 1.5)
+
+    .b
+        position: relative
+        border: none !important
+
+        &::after
+            content: ' '
+            display: block
+            absolute: 0 -33.33% -33.33% 0
+            border: 0 solid $border-color
+            transform-origin: 0 0
+            pointer-events: none // 解决挡住点击事件的问题
+            transform: scale(.75)
+            width: 133.33%
+            box-sizing: border-box
+
+        &-t
+            &::after
+                border-top-width: 1px
+
+        &-r
+            &::after
+                border-right-width: 1px
+
+        &-b
+            &::after
+                border-bottom-width: 1px
+
+        &-l
+            &::after
+                border-left-width: 1px
+
+        &-all
+            &::after
+                border-width: 1px
+
+@media (-webkit-min-device-pixel-ratio:2), (min-device-pixel-ratio: 2)
+
+    .b
+        position: relative
+        border: none !important
+
+        &::after
+            content: ' '
+            display: block
+            absolute: 0 -100% -100% 0
+            border: 0 solid $border-color
+            transform-origin: 0 0
+            pointer-events: none // 解决挡住点击事件的问题
+            transform: scale(.5)
+            width: 200%
+            box-sizing: border-box
+
+        &-t
+            &::after
+                border-top-width: 1px
+
+        &-r
+            &::after
+                border-right-width: 1px
+
+        &-b
+            &::after
+                border-bottom-width: 1px
+
+        &-l
+            &::after
+                border-left-width: 1px
+
+        &-all
+            &::after
+                border-width: 1px
